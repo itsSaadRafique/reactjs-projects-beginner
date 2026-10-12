@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Archivo Black";
+  
+}
+
+body {
+  background-color: #111;
+  color: #fff;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+
+.container {
+  height: 490px;
+  width: 280px;
+  border-radius: 40px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border: 1px solid #111;
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+  transition: all .2s ease;
+}
+
+.container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 50px 50px -20px rgb(0, 0, 0);
+  border: 10px solid rgb(0, 0, 0);
+}
+
+.skill {
+  color: crimson;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: 100;
+}
+
+.img {
+  height: 100%;
+  width: 100%;
+}
+
+.name {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  padding: 5px;
+  font-weight: 100;
+
+  transform: scaleY(2);
+
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: .5px rgb(83, 83, 83);
+
+
+
+}
+
+/* App.jsx */
+.main {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.heading {
+  width: 10%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.heading h1 {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 70px;
+  
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px rgba(105, 104, 104, 0.955);
+  font-weight:500;
+}
+
+.heading h3 {
+  color: crimson;
+}
+
+.app-cards {
+  padding: 20px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  gap: 20px;
+  background-color: crimson;
+}
+.app-cards::-webkit-scrollbar {
+  display: none;
+}
+
+/* Apply styles for screens lower than 768px */
+@media (max-width: 768px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .heading {
+    padding: 0;
+    margin: 0;
+    height: 20em;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .heading h1 {
+    font-size: 2em;
+    writing-mode: horizontal-tb;
+  }
+
+  .heading h3{
+    font-size:2em;
+  }
+
+  .app-cards {
+    width: 100%;
+    justify-content: center;
+  }
+}

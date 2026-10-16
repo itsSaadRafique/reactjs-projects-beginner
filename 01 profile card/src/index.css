@@ -20,17 +20,17 @@ body {
 }
 
 .card-container {
-  height: 550px;
-  width: 320px;
+  height: 460px;
+  width: 280px;
   border-radius: 20px;
   background-color: rgb(216, 215, 215);
   overflow: hidden;
   box-shadow: 0 0 15px rgb(57, 57, 57);
+  transition: all .2s ease-in-out;
 }
 
 .card-container:hover {
   transform: scale(1.1);
-  transition: all .2s ease-in-out;
 }
 
 .image-div {
